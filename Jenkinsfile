@@ -14,7 +14,7 @@ pipeline {
       stage("Run container"){
         steps {
           sh "docker run -d -p 5500:5500 --name flask_app flask_image"
-          sh ""
+          //include a healthcheck? curl?
         }
       }
   }
