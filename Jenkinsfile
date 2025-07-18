@@ -37,5 +37,12 @@ pipeline {
         sh "docker run -d -p 5500:5500 --name flask_app flask_image"
       }
     }
+
+    stage("Run Unit Test") {
+      steps {
+        sh "sleep 3"
+        sh "python3 test_app.py"
+      }
+    }
   }
 }
